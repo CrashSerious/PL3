@@ -164,6 +164,69 @@
 #define elf4_data		0x000d68b8
 #endif /* KIOSK */
 
+#elif defined(FIRMWARE_3_41_DEBUG)
+/* Common Symbols */
+#define memcpy 0x80014
+#define memset 0x50A08
+#define strcpy 0x50BB4
+#define strncmp 0x50C08 //
+#define strlen 0x50BDC
+#define pathdup_from_user 0x1B9EF8 // FIXME: unsure of the name!
+#define copy_from_user 0xE8B4 //
+#define copy_to_user 0xE698 //
+#define alloc 0x65974 //
+#define free 0x65DB4 //
+#define USBRegisterDriver 0xD7964 //
+#define syscall_table 0x303130
+#define USBGetDeviceDescriptor 0xD8024 // FIXME: unsure of the name! //
+#define USBOpenEndpoint 0xD8050 // FIXME
+#define USBControlTransfer 0xD7FB8 // FIXME //
+#define memory_patch_func 0x520E0
+#define patch_func1 0x4C970
+#define patch_func1_offset 0x34
+#define patch_func2 0x52940 //
+#define patch_func2_offset 0x2C
+#define patch_func3 0x2C07D0 //
+#define patch_func3_offset 0x24
+#define patch_func4 0x525DC
+#define patch_func4_offset 0x0
+#define patch_func5 0x053E94 //
+#define patch_func5_offset 0x0
+#define patch_func6 0x02509C
+#define patch_func6_offset 0x0
+#define patch_func7 0x0EDA60 //
+#define patch_func7_offset 0x0
+#define patch_func8 0x05AB00 //lv2open update patch //
+#define patch_func8_offset1 0xA4 //lv2open update patch
+#define patch_func8_offset2 0x208 //lv2open update patch
+#define patch_func9 0x53104 // must upgrade error
+#define patch_func9_offset 0x3EC
+#define patch_func10 0x5ACFC // 0x48000098 Debug retail package fix
+#define patch_syscall_func 0
+#define patch_data1 0x3D5B90
+#define rtoc_entry_1 0x1028
+#define rtoc_entry_2 -0x6920
+
+// Payload bases
+#define MEM_BASE2 (0x54400)
+#define RESIDENT_AREA_MAXSIZE (1296)
+#define HASH_TABLE_1 0
+#define HASH_TABLE_2 0
+#define HASH_TABLE_3 0
+#define HASH_TABLE_4 0
+
+#define elf1_func1 0
+#define elf1_func1_offset 0
+#define elf1_func2 0
+#define elf1_func2_offset 0
+#define elf2_func1 0
+#define elf2_func1_offset 0
+
+#define elf3_func1 0
+#define elf3_func2 0
+#define elf3_data 0
+#define elf4_data 0
+
 #elif defined(FIRMWARE_3_40)
 
 /* Common Symbols */
